@@ -1,0 +1,122 @@
+<html>
+    <!-- BEGIN HEAD-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Crud Operations</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+        <!-- BOOTSTRAP CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BEGIN BODY -->
+    <body>
+
+
+
+
+        <!-- PAGE CONTENT -->
+        <main class="jumbotron">
+            <div class="container text-center">
+                <h1>Scheduler</h1>
+                <div class="row">
+                    <!-- Blank input field to add new employees -->
+                    <form action="javascript:" method="POST" onsubmit="app.Add()" class=""> 
+                        <input type="text" id="addName" placeholder="New employee">
+                        <input type="submit" value="Add">
+                    </form>
+                    <!-- input field used to edit entries (hidden by default) -->
+                    <div id="editInput">
+                        <form action="javascript:" method="POST" id="saveEdit">
+                            <input type="text" id="editName">
+                            <input type="submit" value="Edit"> <a onclick="CloseInput()"></a>
+                        </form>
+                    </div>
+                    <p id="counter"></p>
+                    <table id="allEmployees">
+                        <!-- Table Row -->
+                        <tr>
+                            <th>Name:</th>
+                        </tr>
+                        <!-- Where employee list is updated/added/deleted/modified with crud.js-->
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!-- END PAGE CONTAINER -->
+
+
+
+
+
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <!-- BEGIN PRE-FOOTER -->
+            <div class="page-prefooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-8 footer-block">
+                            <h2>Follow Me On:</h2>
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="javascript:" data-original-title="github" class="github"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" data-original-title="facebook" class="facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" data-original-title="twitter" class="twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" data-original-title="googleplus" class="googleplus"></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" data-original-title="linkedin" class="linkedin"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 footer-block">
+                            <div class="subscribe-form">
+                                <form action="javascript:;">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="email@email.com" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="submit">Contact</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PRE-FOOTER -->
+
+            <!-- BEGIN FOOTER -->
+            <div class="page-footer">
+                <div class="container">
+                    2018 &copy; Stanley Brooks | <a href="#">ReadMe</a>
+                </div>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+            <!-- END FOOTER -->
+        </footer>
+    <!-- JQUERY, AJAX & BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- CUSTOM JAVASCRIPT FOR CRUD OPERATIONS -->
+    <script src="crud.js"></script>
+    </body>
+    <!-- END BODY -->
+</html>
