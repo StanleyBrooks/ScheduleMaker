@@ -25,7 +25,11 @@ main {
 p {
     margin-top: 10px;
 }
-
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
 
 /**************/
