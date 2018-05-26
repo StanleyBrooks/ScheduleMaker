@@ -1,7 +1,7 @@
 var app = new function() {
     this.el = document.getElementById('allEmployees');
     //Employees already entered (this will eventually pull from a db)
-    this.allEmployees = ['Employee 1', 'Employee 2', 'Employee 3', 'Employee 4', 'Employee 5', 'Employee 6', 'Employee 7', 'Employee 8'];
+    this.allEmployees = ['Employee 1', 'Employee 2', 'Employee 3', 'Employee 4', 'Employee 5', 'Employee 6', 'Employee 7', 'Employee 8', 'Employee 1', 'Employee 2', 'Employee 3', 'Employee 4', 'Employee 5', 'Employee 6', 'Employee 7', 'Employee 8'];
 
     //Count the number of total employees to display at the top
     this.Count = function(entries) {
@@ -22,8 +22,8 @@ var app = new function() {
         var entries = '';
         if (this.allEmployees.length > 0) {
             for (i = 0; i < this.allEmployees.length; i++) {
-                entries += '<tr class="row">';
-                entries += '<td clas="col">' + this.allEmployees[i] + '</td>';
+                entries += '<tr>';
+                entries += '<th scope="row">' + this.allEmployees[i] + '</th>';
                 entries += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
                 entries += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
                 entries += '</tr>';

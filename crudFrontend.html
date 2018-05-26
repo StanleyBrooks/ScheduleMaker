@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
-
-
     <!-- HEAD -->
     <head>
         <meta charset="utf-8"/>
         <title>Crud Operations</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
         <!-- BOOTSTRAP CDN-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
         <!-- CSS -->
         <link href="./css/style.css" rel="stylesheet" type="text/css">
-
     </head>
     <!-- END HEAD -->
 
     <!-- BODY -->
     <body>
-
         <!-- NAV -->
         <!-- <nav class="container">
             <img id="logo" class="navbar-brand" src="img/sitelogo.svg" data-target="#modalButton" data-toggle="modal">
@@ -28,34 +22,35 @@
 
 
 
-
-
         <!-- MAIN -->
-        <main class="">
-            <div class="container text-center">
-                <h1>Weekly Labor Scheduler:</h1>
-                <div class="row">
-                    <!-- Blank input field to add new employees -->
-                    <form action="javascript:" method="POST" onsubmit="app.Add()" class=""> 
-                        <input type="text" id="addName" placeholder="New employee">
-                        <input type="submit" value="Add">
+        <main class="container">
+            <h1 class="text-center">Weekly Labor Scheduler:</h1>
+            <div class="row">
+                <!-- Blank input field to add new employees -->
+                <form action="javascript:" method="POST" onsubmit="app.Add()" class="text-center"> 
+                    <input type="text" id="addName" placeholder="New employee">
+                    <input type="submit" value="Add">
+                </form>
+                <!-- input field used to edit entries (hidden by default) -->
+                <div id="editInput">
+                    <form action="javascript:" method="POST" id="saveEdit" class="text-center">
+                        <input type="text" id="editName">
+                        <input type="submit" value="Edit"> <a onclick="CloseInput()"></a>
                     </form>
-                    <!-- input field used to edit entries (hidden by default) -->
-                    <div id="editInput">
-                        <form action="javascript:" method="POST" id="saveEdit">
-                            <input type="text" id="editName">
-                            <input type="submit" value="Edit"> <a onclick="CloseInput()"></a>
-                        </form>
+                </div>
+
+                <p id="counter" class="text-center"></p>
+
+                <div class="container pre-scrollable">
+                    <div class="row">
+                        <table id="allEmployees" class="table">
+                            <!-- This should be a <th> element because it 
+                            signifies header names, but having an issue with it being hidden  -->
+                            <p scope="col">Name:</p>
+                            <!-- This application works by having crud.js insert table elements here -->
+                            <tbody></tbody>
+                        </table>
                     </div>
-                    <p id="counter"></p>
-                    <table id="allEmployees">
-                        <!-- This application works by having crud.js insert table elements here -->
-                        <tr>
-                            <th>Name:</th>
-                        </tr>
-                        <!-- Where employee list is updated/added/deleted/modified with crud.js-->
-                        <tbody></tbody>
-                    </table>
                 </div>
             </div>
         </main>
@@ -63,17 +58,17 @@
 
 
 
-
-
         <!-- FOOTER -->
         <footer class="footer">
 
             <!-- PRE-FOOTER -->
-            <div class="page-prefooter">
+            <div class="prefooter">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-8 footer-block">
-                            <h2>Follow Me On:</h2>
+                        <div class="col-md-6 col-sm-6 col-xs-12 footer-block">
+
+                            <h2 class="">Follow Me On:</h2>
+
                             <ul class="social-icons">
                                 <li>
                                     <a href="javascript:" data-original-title="github" class="github"></a>
@@ -94,7 +89,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 footer-block">
                             <div class="subscribe-form">
-                                <form action="javascript:;">
+                                <form action="javascript:">
                                     <div class="input-group">
                                         <input type="text" placeholder="email@email.com" class="form-control">
                                         <span class="input-group-btn">

@@ -1,21 +1,9 @@
 /********************/
 /* MAIN PAGE LAYOUT */
 /********************/
-container {
-    width: 150%;
-}
-footer {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-main {
-    padding: 10px;
-    width: 100%;
-}
 /*input buttons*/
 input {
-    padding: 10px 12px;
+    padding: 10px 20px;
     font-size: 16px;
 }
 /*Input & Button Styling*/
@@ -23,48 +11,59 @@ input[type='submit'],
 button {
     cursor: pointer;
     border: none;
-    padding: 10px 32px;
-    margin: 1px;
+    padding: 10px 20px;
     text-align: center;
     font-size: 16px;
 }
+table {
+    overflow-y: scroll;
+}
+
+main {
+    padding-bottom: 200px;
+}
+p {
+    margin-top: 10px;
+}
+
 
 
 /**************/
 /* CRUD STUFF */
 /**************/
-/* Makes the edit input bar and button hidden by default */
+/* Makes the edit input bar and button hidden by default  */
 #editInput{
     display: none;
     padding: 10px 0;
     font-size: 16px;
 }
-#allEmployees {
-    width: 80%;
-    margin-top:5%;
-}
-/* table > tbody > tr:nth-child(1) {
+/* #allEmployees {
     background-color: red;
 } */
-table > tbody > tr > td:nth-child(1) {
-    width: 70%;
+ /* table > tbody > tr:nth-child(1) {
+    background-color: red;
+} */
+ table > tbody > tr > td:nth-child(1) {
+    width: 100%;
 }
 table > tbody > tr > td:nth-child(2) {
-    width: 50px;
+    width: 30px;
 }
 table > tbody > tr > td:nth-child(3) {
-    width: 50px;
+    width: 30px;
 }
+
 
 
 /************************/
 /* PREFOOTER AND FOOTER */
 /************************/
-.page-prefooter {
+.prefooter {
     padding: 30px 10px;
     clear: both;
+    display: none;
 }
-.page-prefooter h2 {
+.prefooter h2 {
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
@@ -82,16 +81,17 @@ table > tbody > tr > td:nth-child(3) {
     height: 36px;
 }
 /* Contact Button (in prefooter)*/
-.subscribe-form .btn {
+.subscribe-form  {
     height: 34px;
     text-transform: uppercase;
-    padding: 2px 16px;
 }
 .page-footer {
     font-size: 14px;
     font-weight: 300;
-    padding: 17px 0;
+    padding: 12px 0;
+    
 }
+
 
 
 /**********************/
@@ -99,6 +99,8 @@ table > tbody > tr > td:nth-child(3) {
 /**********************/
 .social-icons {
     padding-top: 9px;
+    margin: 0;
+    padding: 0;
 }
 .social-icons li {
     opacity: 0.80;
@@ -142,14 +144,16 @@ table > tbody > tr > td:nth-child(3) {
 }
 
 
+
 /*****************/
 /* MEDIA QUERIES */
 /*****************/
-@media only screen and (min-height: 800px) {
-    footer {
-        position: fixed;
+@media only screen and (min-width: 400px) {
+    .prefooter {
+        display: block;
     }
 }
+
 
 
 /**********/
@@ -163,23 +167,23 @@ button {
     color: whitesmoke;
     background-color: #4db3a4;
 }
-.page-prefooter {
+.prefooter {
     background: #48525e;
     color: #a2abb7;
 }
-.page-prefooter h2 {
+.prefooter h2 {
     color: #4db3a4;
 }
-.page-prefooter .subscribe-form .form-control {
+.prefooter .subscribe-form .form-control {
     background: #343b44;
     border-color: #343b44;
     color: #a2abb7;
 } 
-.page-prefooter .subscribe-form .form-control {
+.prefooter .subscribe-form .form-control {
     color: #939eac;
     opacity: 1;
 }
-.page-prefooter .subscribe-form .btn {
+.prefooter .subscribe-form .btn {
     color: #58b8a9;
     background-color: white;
 }
