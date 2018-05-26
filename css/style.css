@@ -40,7 +40,7 @@ button {
     font-size: 16px;
 }
 #allEmployees {
-    width: 100%;
+    width: 80%;
     margin-top:5%;
 }
 /* table > tbody > tr:nth-child(1) {
@@ -55,7 +55,6 @@ table > tbody > tr > td:nth-child(2) {
 table > tbody > tr > td:nth-child(3) {
     width: 50px;
 }
-/*END OF CRUD STUFF*/
 
 
 /************************/
@@ -153,9 +152,9 @@ table > tbody > tr > td:nth-child(3) {
 }
 
 
-/**************/
-/* All Colors */
-/**************/
+/**********/
+/* Colors */
+/**********/
 body {
     background-color: #eee;
 }
@@ -179,9 +178,6 @@ button {
 .page-prefooter .subscribe-form .form-control {
     color: #939eac;
     opacity: 1;
-}
-.page-prefooter .subscribe-form .btn:active:hover, .page-prefooter .subscribe-form .btn.active:hover {
-    background-color: #429a8d;
 }
 .page-prefooter .subscribe-form .btn {
     color: #58b8a9;
