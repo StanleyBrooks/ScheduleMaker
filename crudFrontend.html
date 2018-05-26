@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <!-- BEGIN HEAD-->
+
+
+    <!-- HEAD -->
     <head>
         <meta charset="utf-8"/>
         <title>Crud Operations</title>
@@ -14,13 +17,20 @@
     </head>
     <!-- END HEAD -->
 
-    <!-- BEGIN BODY -->
+    <!-- BODY -->
     <body>
 
+        <!-- NAV -->
+        <nav class="container">
+            <img id="logo" class="navbar-brand" src="img/sitelogo.svg" data-target="#modalButton" data-toggle="modal">
+        </nav>
+        <!-- END NAV -->
 
 
 
-        <!-- PAGE CONTENT -->
+
+
+        <!-- MAIN -->
         <main class="">
             <div class="container text-center">
                 <h1>Weekly Labor Scheduler:</h1>
@@ -39,7 +49,7 @@
                     </div>
                     <p id="counter"></p>
                     <table id="allEmployees">
-                        <!-- Table Row -->
+                        <!-- This application works by having crud.js insert table elements here -->
                         <tr>
                             <th>Name:</th>
                         </tr>
@@ -49,9 +59,7 @@
                 </div>
             </div>
         </main>
-        <!-- END PAGE CONTAINER -->
-
-
+        <!-- END MAIN -->
 
 
 
@@ -59,7 +67,8 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <!-- BEGIN PRE-FOOTER -->
+
+            <!-- PRE-FOOTER -->
             <div class="page-prefooter">
                 <div class="container">
                     <div class="row">
@@ -106,11 +115,60 @@
                     2018 &copy; Stanley Brooks | <a href="#">ReadMe</a>
                 </div>
             </div>
-            <div class="scroll-to-top">
-                <i class="icon-arrow-up"></i>
-            </div>
             <!-- END FOOTER -->
         </footer>
+
+
+
+
+
+<!--#modalButton-->
+		<!-- <div class="modal fade" id="modalButton" tabindex="-1" role="dialog" aria-labelledby="modalButton form" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Stanley Brooks</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container col">
+                                <img class="container" src="img/personalLogo.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 ">
+                                <a href="https://github.com/StanleyBrooks">
+                                    <img class="img-thumbnail d-inline" src="img/github.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="mailto:sabroo2@gmail.com">
+                                    <img class="img-thumbnail" src="img/email.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="https://twitter.com/stanteloupe">
+                                    <img class="img-thumbnail d-inline" src="img/twitter.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="https://www.facebook.com/Stanley.a.Brooks3">
+                                    <img class="img-thumbnail d-inline" src="img/FB-fLogo_2016.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    <!--#modalButton-->
+    
     <!-- JQUERY, AJAX & BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
