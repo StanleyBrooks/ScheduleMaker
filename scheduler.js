@@ -1,3 +1,30 @@
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+//Creating employeedatabase schema
+var employeeSchema = new Schema({
+    employeeNumber: { type: Number, required: true, unique: true },
+    firstName: String,
+    lastName: String,
+    fullTime: Boolean,
+    partTime: Boolean,
+    fixedSchedule: Boolean
+});
+
+employeeSchema.methods.fullName = function() {
+    this.name = this.firstName + ' ' + this.lastName;
+    return this.name; 
+}
+
+var Employee = mongoose.model('Employee', employeeSchema);
+
+module.exports = Employee;
+mongoose.connect('mongodb://localhost/employeedatabase')
+
+
+
+
 //CRUD(l)
 //Create = Create new employees and assign them an employee #, name(first and last), schedule type and preferences
 //and save these preferences to a db
@@ -34,26 +61,26 @@
 
 //General Employee Class
 //Create a class and constructor to handel employee creation
-class Employee {
-    constructor(firstName, lastName, employeeNumber, hoursPerWeek, fixedSchedule, daysPrefered, shiftPrefered) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.employeeNumber = employeeNumber;
-        this.hoursPerWeek = hoursPerWeek;
-        this.fixedSchedule = fixedSchedule;
-    }
-}
+// class Employee {
+//     constructor(firstName, lastName, employeeNumber, hoursPerWeek, fixedSchedule, daysPrefered, shiftPrefered) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.employeeNumber = employeeNumber;
+//         this.hoursPerWeek = hoursPerWeek;
+//         this.fixedSchedule = fixedSchedule;
+//     }
+// }
 
-class FixedSchedule {
-    constructor (setDaysOff, setShift) {
-        this.setDaysOff = setDaysOff;
-        this.setShift = setShift;
-    }
-}
+// class FixedSchedule {
+//     constructor (setDaysOff, setShift) {
+//         this.setDaysOff = setDaysOff;
+//         this.setShift = setShift;
+//     }
+// }
 
-const martin = new Employee('Martin', 'Prather', 14432, 35, true);
+// const martin = new Employee('Martin', 'Prather', 14432, 35, true);
 
-console.log(martin)
+// console.log(martin)
 
 //General Employee Setup
 // var employee = {

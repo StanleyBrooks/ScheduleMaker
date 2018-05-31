@@ -23,7 +23,7 @@ var app = new function() {
         if (this.allEmployees.length > 0) {
             for (i = 0; i < this.allEmployees.length; i++) {
                 entries += '<tr>';
-                 entries += '<th scope="row">' + this.allEmployees[i] + '</th>';
+                entries += '<th scope="row">' + this.allEmployees[i] + '</th>';
                 entries += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
                 entries += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
                 entries += '</tr>';
